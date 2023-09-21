@@ -12,4 +12,5 @@ criar um menu;
 função de criar cadastros;
 função de atualizar os cadastros;
 função de deletar os cadastros;
-função de ler os cadastros.
+update na função de >LER< cadastros:
+-- Os itens serão dados em elementos de uma lista.

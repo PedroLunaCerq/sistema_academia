@@ -1,3 +1,5 @@
+from functions import ler
+
 espaco_de_menu1 = '=' * 15
 espaco_de_menu2 = '=-=' * 10
 
@@ -13,7 +15,12 @@ while True:
 
     #ler
     elif operar == 'LER':
-        print('Estou aqui!')
+        ler_quais = input('Deseja visualizar todos, ou um específico? [Todos/Especificar]').upper()
+        if ler_quais == 'TODOS':
+            perfis = ler()
+            print(perfis)
+        elif ler_quais == 'ESPECIFICAR':
+            print('Estou aqui!')
 
     #atualizar
     elif operar == 'ATUALIZAR':
