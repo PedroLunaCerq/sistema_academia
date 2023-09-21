@@ -1,1 +1,2 @@
-matrícula,nome,nome,nascimento,faixa,graduação,sexo,plano,status
+matrícula,nome,sexo,nascimento,faixa,graduação,,plano,status
+1,ana,f,2000,azul,2023,normal,ativo

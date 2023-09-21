@@ -5,3 +5,6 @@ def ler() -> str:
         perfis_todos = arquivo.read()
         arquivo.close()
     return perfis_todos
+
+#Função 'Criar'.
+#matricula, nome, data de nascimento, faixa, ultima graduação, sexo, plano, status
