@@ -1,4 +1,4 @@
-from functions import ler, ler_todos
+from functions import ler, ler_todos, criar_perfil
 
 espaco_de_menu1 = '=' * 15
 espaco_de_menu2 = '=-=' * 10
@@ -17,7 +17,7 @@ F: ''').upper()
 
     #criar
     if operar == '1':
-        print('Estou aqui!)')
+        criar_perfil()
 
     #ler
     elif operar == '2':

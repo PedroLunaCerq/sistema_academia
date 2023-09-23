@@ -3,6 +3,7 @@ def ler() -> list:
     '''Esta função extrai todo o arquivo como uma string.'''
     with open('cadastros_academia.csv', 'r') as arquivo:
         perfis_todos = arquivo.read()
+        '\n'.join(perfis_todos)
         perfis_todos.split('\n')
         lista_perfis = []
         for perfil in perfis_todos:
@@ -10,11 +11,27 @@ def ler() -> list:
         arquivo.close()
     return lista_perfis
 
+#Função para ler todos.
 def ler_todos():
     '''Esta função printa todos os perfis, na operação 2.'''
     perfis = ler()
     perfis = ''.join(perfis)
     print(perfis)
 
-#Função 'Criar'.
-#matricula, nome, data de nascimento, faixa, ultima graduação, sexo, plano, status
+##Função para criar perfil.
+#def criar_perfil():
+#    '''Esta função cria perfis, e importa para o arquivo.'''
+#    #    matricula = 
+#    perfil = {'nome': '', 'genero': '', 'nascimento': '', 'faixa': '', 'ultima_grad': '', 'plano': '', 'status': ''}
+#    perfil['nome'] = input('Insira o nome: ')
+#    perfil['genero'] = input('Insira o genero [M/F]: ')
+#    perfil['nascimento'] = input('Insira o nascimento: ')
+#    perfil['faixa'] = input('Insira a faixa atual: ')
+#    perfil['ultima_grad'] = input('Insira a última graduação: ')
+#    perfil['plano'] = input('Insira o plano: ')
+#    perfil['status'] = input('Insira o status do plano: ')
+#    with open('cadastros_academia.csv', 'a') as arquivo:
+#        arquivo.append('\n')
+#        arquivo.append(perfil)
+#        arquivo.close()
+#    return('Perfil adicionado!')

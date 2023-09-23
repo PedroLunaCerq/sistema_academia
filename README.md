@@ -5,7 +5,7 @@ Gerenciamento de uma academia.
 alunos e contas
 
 alunos:
-matricula, nome, data de nascimento, faixa, ultima graduação, sexo, plano, status
+matricula,data de nascimento, faixa, ultima graduação, sexo, plano, status
 
 tarefas:
 aprimorar o menu;
