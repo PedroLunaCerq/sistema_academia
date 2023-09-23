@@ -1,4 +1,4 @@
-from functions import ler
+from functions import ler, ler_todos
 
 espaco_de_menu1 = '=' * 15
 espaco_de_menu2 = '=-=' * 10
@@ -11,7 +11,9 @@ while True:
 [2] - Ler.
 [3] - Atualizar.
 [4] - Excluir.
-[0] - Sair''').upper()
+[0] - Sair.
+
+F: ''').upper()
 
     #criar
     if operar == '1':
@@ -21,9 +23,11 @@ while True:
     elif operar == '2':
         ler_quais = input('''Deseja visualizar todos, ou um específico?
 [1] - Todos.
-[2] - Especificar.''')
+[2] - Especificar.
+                          
+F: ''')
         if ler_quais == '1':
-            perfis = ler()
+            perfis = ler_todos()
             print(perfis)
         elif ler_quais == '2':
             print('Estou aqui!')
