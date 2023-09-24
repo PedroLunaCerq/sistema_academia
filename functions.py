@@ -18,20 +18,20 @@ def ler_todos():
     perfis = ''.join(perfis)
     print(perfis)
 
-##Função para criar perfil.
+#Função para criar perfil.
 #def criar_perfil():
 #    '''Esta função cria perfis, e importa para o arquivo.'''
 #    #    matricula = 
 #    perfil = {'nome': '', 'genero': '', 'nascimento': '', 'faixa': '', 'ultima_grad': '', 'plano': '', 'status': ''}
-#    perfil['nome'] = input('Insira o nome: ')
-#    perfil['genero'] = input('Insira o genero [M/F]: ')
+#    perfil['nome'] = input('Insira o nome: ').capitalize()
+#    perfil['genero'] = input('Insira o genero [M/F]: ').upper()
 #    perfil['nascimento'] = input('Insira o nascimento: ')
-#    perfil['faixa'] = input('Insira a faixa atual: ')
+#    perfil['faixa'] = input('Insira a faixa atual: ').capitalize
 #    perfil['ultima_grad'] = input('Insira a última graduação: ')
-#    perfil['plano'] = input('Insira o plano: ')
-#    perfil['status'] = input('Insira o status do plano: ')
+#    perfil['plano'] = input('Insira o plano: ').capitalize
+#    perfil['status'] = input('Insira o status do plano [ON/OFF]: ')
 #    with open('cadastros_academia.csv', 'a') as arquivo:
-#        arquivo.append('\n')
-#        arquivo.append(perfil)
+#        backup = arquivo.append(perfil)
+#        arquivo.write(backup)
 #        arquivo.close()
 #    return('Perfil adicionado!')
