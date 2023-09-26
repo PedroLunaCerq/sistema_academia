@@ -19,19 +19,24 @@ def ler_todos():
     print(perfis)
 
 #Função para criar perfil.
-#def criar_perfil():
-#    '''Esta função cria perfis, e importa para o arquivo.'''
-#    #    matricula = 
-#    perfil = {'nome': '', 'genero': '', 'nascimento': '', 'faixa': '', 'ultima_grad': '', 'plano': '', 'status': ''}
-#    perfil['nome'] = input('Insira o nome: ').capitalize()
-#    perfil['genero'] = input('Insira o genero [M/F]: ').upper()
-#    perfil['nascimento'] = input('Insira o nascimento: ')
-#    perfil['faixa'] = input('Insira a faixa atual: ').capitalize
-#    perfil['ultima_grad'] = input('Insira a última graduação: ')
-#    perfil['plano'] = input('Insira o plano: ').capitalize
-#    perfil['status'] = input('Insira o status do plano [ON/OFF]: ')
-#    with open('cadastros_academia.csv', 'a') as arquivo:
-#        backup = arquivo.append(perfil)
-#        arquivo.write(backup)
-#        arquivo.close()
-#    return('Perfil adicionado!')
+def criar_perfil():
+    '''Esta função cria perfis, e importa para o arquivo.'''
+    perfil = {'nome': '', 'genero': '', 'nascimento': '', 'faixa': '', 'ultima_grad': '', 'plano': '', 'status': ''}
+    perfil['nome'] = input('Insira o nome: ').capitalize()
+    perfil['genero'] = input('Insira o genero [M/F]: ').upper()
+    perfil['nascimento'] = input('Insira o nascimento: ')
+    perfil['faixa'] = input('Insira a faixa atual: ').capitalize()
+    perfil['ultima_grad'] = input('Insira a última graduação: ')
+    perfil['plano'] = input('Insira o plano: ').capitalize()
+    perfil['status'] = input('Insira o status do plano [ON/OFF]: ')
+    with open('cadastros_academia.csv', 'a') as arquivo:
+        arquivo.write('\n')
+        perfil = transformar_str(perfil)
+        arquivo.write(perfil)
+        arquivo.close()
+    return('Perfil adicionado!')
+
+def transformar_str(dicionario) -> str:
+    '''Esta função transforma um dicionário em uma string.'''
+    perfil = f"{dicionario['nome']},{dicionario['genero']},{dicionario['nascimento']},{dicionario['faixa']},{dicionario['ultima_grad']},{dicionario['plano']},{dicionario['status']}"
+    return perfil
