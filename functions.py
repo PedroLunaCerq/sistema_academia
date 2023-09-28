@@ -40,3 +40,9 @@ def transformar_str(dicionario) -> str:
     '''Esta função transforma um dicionário em uma string.'''
     perfil = f"{dicionario['nome']},{dicionario['genero']},{dicionario['nascimento']},{dicionario['faixa']},{dicionario['ultima_grad']},{dicionario['plano']},{dicionario['status']}"
     return perfil
+
+def excluir():
+    print('=' * 10)
+    '''Escolha qual perfil excluir!'''
+    print('=' * 10)
+    operar = input('Escolha qual perfil excluir!')
