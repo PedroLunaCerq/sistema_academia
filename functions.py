@@ -22,7 +22,7 @@ def ler_todos():
 def criar_perfil():
     '''Esta função cria perfis, e importa para o arquivo.'''
     perfil = {'nome': '', 'genero': '', 'nascimento': '', 'faixa': '', 'ultima_grad': '', 'plano': '', 'status': ''}
-    perfil['nome'] = input('Insira o nome: ').capitalize()
+    perfil['nome'] = input('Insira o nome: ').tittle()
     perfil['genero'] = input('Insira o genero [M/F]: ').upper()
     perfil['nascimento'] = input('Insira o nascimento: ')
     perfil['faixa'] = input('Insira a faixa atual: ').capitalize()
