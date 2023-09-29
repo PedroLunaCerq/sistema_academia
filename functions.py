@@ -1,24 +1,21 @@
-#Função 'Ler'.
 def ler() -> list:
-    '''Esta função extrai todo o arquivo como uma string.'''
+    '''Esta função extrai todo o arquivo como uma lista.'''
     with open('cadastros_academia.csv', 'r') as arquivo:
         perfis_todos = arquivo.read()
-        '\n'.join(perfis_todos)
-        perfis_todos.split('\n')
         lista_perfis = []
         for perfil in perfis_todos:
             lista_perfis.append(perfil)
         arquivo.close()
     return lista_perfis
 
-#Função para ler todos.
 def ler_todos():
     '''Esta função printa todos os perfis, na operação 2.'''
     perfis = ler()
     perfis = ''.join(perfis)
-    print(perfis)
+    perfis = perfis.split('\n')
+    return perfis
 
-#Função para criar perfil.
+#Função para criar cadastros únicos.
 def criar_perfil():
     '''Esta função cria perfis, e importa para o arquivo.'''
     perfil = {'nome': '', 'genero': '', 'nascimento': '', 'faixa': '', 'ultima_grad': '', 'plano': '', 'status': ''}
@@ -41,8 +38,16 @@ def transformar_str(dicionario) -> str:
     perfil = f"{dicionario['nome']},{dicionario['genero']},{dicionario['nascimento']},{dicionario['faixa']},{dicionario['ultima_grad']},{dicionario['plano']},{dicionario['status']}"
     return perfil
 
-def excluir():
-    print('=' * 10)
-    '''Escolha qual perfil excluir!'''
-    print('=' * 10)
-    operar = input('Escolha qual perfil excluir!')
+##Arrumar.
+def excluir(operar):
+    with open('cadastros_academia.csv', 'r') as arquivo:
+        perfis = arquivo.read()
+        arquivo.close
+    with open('cadastros_academia.csv', 'w') as arquivo:
+        perfis_update = []
+        for perfil in perfis:
+            if perfil[0] != f'{operar}':
+                perfis_update.append(perfil)
+        perfis_upload = ''.join(perfis_update)
+        arquivo.write(perfis_upload)
+        arquivo.close()

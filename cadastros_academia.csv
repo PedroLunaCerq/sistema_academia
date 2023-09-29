@@ -1,3 +1,3 @@
-matricula,nome,sexo,nascimento,faixa,graduacao,plano,status
-Tamires,F,1995,Roxa,2022,Recorrente,On
-Pedro,M,2005,Branca,Nao Possui,Desmatriculado,Off
+cadastro,matricula,nome,sexo,nascimento,faixa,graduacao,plano,status
+1,Tamires,F,1995,Roxa,0,Recorrente,On
+2,Pedro,M,005,Branca,Nao Possui,Desmatriculado,Off
