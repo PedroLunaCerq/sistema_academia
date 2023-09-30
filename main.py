@@ -1,4 +1,4 @@
-from functions import ler, ler_todos, criar_perfil, excluir
+from functions import ler, criar_perfil, excluir, ler_especifico, atualizar
 
 espaco_de_menu1 = '=' * 15
 espaco_de_menu2 = '=-=' * 10
@@ -27,18 +27,23 @@ F: ''').upper()
                           
 F: ''')
         if ler_quais == '1':
-            perfis = ler_todos()
+            perfis = ler()
             for perfil in perfis:
-                print(perfil)
+                print(perfil['id'], perfil['nome'])
+        if ler_quais == '2':
+            perfil = ler_especifico()
+            print(perfil)
+            
 
     #atualizar
     elif operar == '3':
-        print('Estou aqui!')
+        id = input('Insira o ID de qual perfil atualizar: ')
+        atualizar(id)
 
     #excluir
     elif operar == '4':
-        operar = input('Insira o cadastro de qual perfil excluir!')
-        excluir(operar)
+        id = input('Insira o ID de qual perfil excluir: ')
+        excluir(id)
 
     #sair
     elif operar == '0':
