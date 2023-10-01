@@ -48,7 +48,8 @@ F: ''')
     #sair
     elif operar == '0':
         break
-
+    print(f"""{espaco_de_menu2}
+Insira o próximo comando: """)
 print(f'''={espaco_de_menu2}
 O sistema foi encerrado! Até a próxima!
 f{espaco_de_menu2}''')
