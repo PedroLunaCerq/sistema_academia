@@ -11,7 +11,7 @@ def ler() -> list:
     return lista_perfis
 
 
-def ler_especifico():
+def ler_especifico() -> dict:
     '''Esta função lê um único perfil.'''
     id = input('Insira o cadastro do perfil: ')
     with open('cadastros_academia.csv', 'r') as arquivo:
@@ -41,7 +41,7 @@ def criar_perfil():
     perfil['faixa'] = input('Insira a faixa atual: ').capitalize()
     perfil['ultima_grad'] = input('Insira a última graduação: ')
     perfil['plano'] = input('Insira o plano: ').capitalize()
-    perfil['status'] = input('Insira o status do plano [ON/OFF]: ')
+    perfil['status'] = input('Insira o status do plano [ON/OFF]: ').capitalize()
     with open('cadastros_academia.csv', 'a', encoding='utf-8') as arquivo:
         arquivo.write('\n')
         perfil = transformar_str(perfil)
@@ -72,6 +72,7 @@ def transformar_dict(cabecalho: str, perfil: str) -> dict:
 
 
 def excluir(id):
+    '''Esta função exclui perfis do arquivo.'''
     with open('cadastros_academia.csv', 'r') as arquivo:
         texto = arquivo.read().split('\n')
         cabecalho = texto.pop(0)
@@ -86,9 +87,12 @@ def excluir(id):
 
     with open('cadastros_academia.csv', 'w') as arquivo:
         arquivo.write(novo_arquivo)
+        arquivo.close()
+    return('Perfil excluído!')
 
 
 def atualizar(id):
+    '''Esta função atualiza perfis do arquivo.'''
     with open('cadastros_academia.csv', 'r') as arquivo:
         texto = arquivo.read().split('\n')
         cabecalho = texto.pop(0)
@@ -113,3 +117,5 @@ def atualizar(id):
 
     with open('cadastros_academia.csv', 'w') as arquivo:
         arquivo.write(novo_arquivo)
+        arquivo.close()
+    return('Perfil atualizado!')
